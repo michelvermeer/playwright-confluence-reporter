@@ -1,0 +1,37 @@
+{
+  "name": "playwright-confluence-reporter",
+  "description": "A Playwright reporter for Confluence",
+  "private": false,
+  "license": "MIT",
+  "keywords": [
+    "Playwright",
+    "Testing",
+    "Confluence",
+    "Reporter"
+  ],
+  "version": "0.1.0",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "/dist"
+  ],
+  "author": "Michel Vermeer <info@michelvermeer.com> (https://michelvermeer.com/)",
+  "homepage": "https://michelvermeer.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michelvermeer/playwright-confluence-reporter.git"
+  },
+  "dependencies": {},
+  "peerDependencies": {}
+}

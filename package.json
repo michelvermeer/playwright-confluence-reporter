@@ -1,0 +1,49 @@
+{
+  "name": "playwright-confluence-reporter",
+  "description": "A Playwright reporter for Confluence",
+  "private": false,
+  "license": "MIT",
+  "keywords": [
+    "Playwright",
+    "Testing",
+    "Confluence",
+    "Reporter"
+  ],
+  "version": "0.1.0",
+  "types": "package/dist/index.d.ts",
+  "main": "package/dist/index.umd.js",
+  "module": "package/dist/index.es.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./package/dist/index.d.ts",
+      "import": "./package/dist/index.es.js",
+      "require": "./package/dist/index.umd.js"
+    },
+    "./styles": "./package/dist/style.css"
+  },
+  "files": [
+    "/package/dist"
+  ],
+  "author": "Michel Vermeer <info@michelvermeer.com> (https://michelvermeer.com/)",
+  "homepage": "https://michelvermeer.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michelvermeer/playwright-confluence-reporter.git"
+  },
+  "scripts": {
+    "export": "tsc && vite build --mode lib",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.14.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "vite": "^6.3.2",
+    "vite-plugin-dts": "^4.5.3"
+  }
+}
