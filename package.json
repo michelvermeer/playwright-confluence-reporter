@@ -9,7 +9,7 @@
     "Confluence",
     "Reporter"
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "types": "package/dist/index.d.ts",
   "main": "package/dist/index.umd.js",
   "module": "package/dist/index.es.js",

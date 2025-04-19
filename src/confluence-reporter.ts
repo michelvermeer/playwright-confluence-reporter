@@ -87,19 +87,22 @@ class ConfluenceReporter implements Reporter {
       return;
     }
 
-    let html = `<p>Status: ${this.testSummary.status}</p><p>Duration (ms): ${this.testSummary.duration}</p><table><thead><tr><th>Suite</th><th>Test</th><th>Project</th><th>Status</th><th>Steps</th></tr></thead><tbody>`;
+    let html = `<p>Status: ${
+      this.testSummary.status
+    }</p><p>Duration (ms): ${Math.round(
+      this.testSummary.duration
+    )}</p><table><thead><tr><th>Suite</th><th>Test</th><th>Project</th><th>Status</th><th>Steps</th></tr></thead><tbody>`;
 
     for (const suite in this.results) {
       for (const test in this.results[suite]) {
         for (const project in this.results[suite][test]) {
-          const { status, duration, description } =
-            this.results[suite][test][project];
+          const { status, description } = this.results[suite][test][project];
           html += `
                 <tr>
                     <td>${suite}</td>
                     <td>${test}</td>
                     <td>${project}</td>
-                    <td>${status === "passed" ? "✅" : "❌"} (${duration})</td>
+                    <td>${status === "passed" ? "✅" : "❌"}</td>
                     <td>${description}</td>
                 </tr>
             `;
